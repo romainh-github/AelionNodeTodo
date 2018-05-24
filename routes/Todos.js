@@ -53,25 +53,25 @@ router.post('', function(request, response, next) {
 });
 
 router.put('/:id', function(request, response, next) {
-    Todo.updateTodo(id, request.body, function(err, row) {
+    Todo.updateTodo(request.params.id, request.body, function(err, row) {
         if (err) {
             response.json(err);
         } else {
-            request.body.id = id;
+            request.body.id = request.params.id;
             response.json(request.body);
         }
     })
 });
 
 router.delete('/:id', function(request, response, next) {
-    Todo.deleteTodo(id, function(err, count) {
+    Todo.deleteTodo(request.params.id, function(err, count) {
         if (err) {
             response.json(err);
         } else {
-            response.json(id);
+            response.json(request.params.id);
         }
     })
-})
+});
 
 
 
