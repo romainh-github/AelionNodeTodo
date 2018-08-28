@@ -43,7 +43,7 @@ var Todo = {
     addTodo: function(Todo, callback) {
         console.log('Add ' + JSON.stringify(Todo));
         return db.query(
-            "INSERT INTO todos (title, debut, fin) VALUES (?,?,?);",
+            "INSERT INTO todos (title) VALUES (?);",
             [Todo.title, Todo.debut, Todo.fin],
             callback
         );
@@ -57,8 +57,8 @@ var Todo = {
      */
     updateTodo(id, Todo, callback) {
         return db.query(
-            "UPDATE todos SET title=?, debut=?, fin=? WHERE id=?;",
-            [Todo.title, Todo.debut, Todo.fin, id],
+            "UPDATE todos SET title=? WHERE id=?;",
+            [Todo.title, id],
             callback
         )
     },

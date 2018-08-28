@@ -13,9 +13,9 @@ var mysql = require('mysql');
  */
 var connexion = mysql.createPool ({
     host: '127.0.0.1',
-    user: 'todos_admin',
+    user: 'todos_dba',
     password: 'admin',
-    database: 'todos'
+    database: 'todos_repo'
 });
 
 module.exports = connexion;
