@@ -12,7 +12,7 @@ var Todo = {
      */
     getTodoById(id, callback) {
         return db.query(
-           "SELECT id, title, debut, fin FROM todos WHERE id=?",
+           "SELECT id, title FROM todos WHERE id=?",
            [id],
            callback
         );
