@@ -1,7 +1,7 @@
 # todo
 Gestion d'une todo-list client (jQuery)
 
-git clone https://github.com/dacodemaniak/nodetodo
+git clone https://github.com/romainh-github/AelionNodeTodo.git
 
 Install dependencies :
 
